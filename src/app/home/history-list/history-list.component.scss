@@ -5,10 +5,12 @@
     border: 1px solid black;
     border-radius: 5px;
   }
-  &__item {
-    padding: 10px;
-  }
   &__link {
+    display: block;
+    height: 100%;
+    padding: 10px;
     font-style: italic;
+    &-item {
+    }
   }
 }

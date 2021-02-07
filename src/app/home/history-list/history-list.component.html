@@ -2,8 +2,8 @@
   <ul class="history__items">
     <li class="history__item">
       <a routerLink="/translation-output/{{ translation.id }}" class="history__link" href="#">
-        {{ translation.sourceLanguage | appHumanizeLang }} ->{{ translation.targetLanguage | appHumanizeLang }} <br/>
-        {{ translation.sourceText | slice:0:30 }} -> {{ translation.targetText | slice:0:30 }}
+        <span class="history__link-item"> {{ translation.sourceLanguage | appHumanizeLang }} -> {{ translation.targetLanguage | appHumanizeLang }} </span> <br/>
+        <span class="history__link-item"> {{ translation.sourceText | slice:0:50 }} -> {{ translation.targetText | slice:0:50 }} </span>
       </a>
     </li>
   </ul>

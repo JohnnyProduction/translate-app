@@ -1,9 +1,9 @@
 <div class="translation-out">
-  <dl *ngIf="translationEntity" class="translation-out__text">
-    <dt>{{ translationEntity.sourceLanguage | appHumanizeLang }}</dt>
-    <dd>{{ translationEntity.sourceText }}</dd>
-    <dt>{{ translationEntity.targetLanguage | appHumanizeLang}}</dt>
-    <dd>{{ translationEntity.targetText }}</dd>
+  <dl *ngIf="translationEntity" class="translation-out__items">
+    <dt class="translation-out__item">{{ translationEntity.sourceLanguage | appHumanizeLang }}</dt>
+    <dd class="translation-out__item">{{ translationEntity.sourceText }}</dd>
+    <dt class="translation-out__item">{{ translationEntity.targetLanguage | appHumanizeLang}}</dt>
+    <dd class="translation-out__item">{{ translationEntity.targetText }}</dd>
   </dl>
   <div class="translation-out__button">
     <button routerLink="/" mat-raised-button color="primary">Back</button>
