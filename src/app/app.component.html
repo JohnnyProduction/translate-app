@@ -1,24 +1,4 @@
 <div class="container">
-  <h1>Translate App</h1>
-  <div class="inner__select">
-    <mat-form-field appearance="fill">
-      <mat-label>Select language</mat-label>
-      <mat-select>
-        <mat-option value="one">English</mat-option>
-        <mat-option value="two">Russian</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="inner__input">
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your text</mat-label>
-      <textarea name="text" rows="5" matInput (input)="inputHandler($event)"></textarea>
-    </mat-form-field>
-  </div>
-  <div class="inner__button">
-    <button mat-raised-button color="primary" (click)="translateText()">Translate</button>
-  </div>
-  <div class="inner__output">
-    <p>{{ text }}</p>
-  </div>
+  <h1>Translate Application</h1>
+  <router-outlet></router-outlet>
 </div>

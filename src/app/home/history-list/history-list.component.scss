@@ -1,0 +1,14 @@
+.history {
+  width: 800px;
+  margin-bottom: 20px;
+  &__items {
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  &__item {
+    padding: 10px;
+  }
+  &__link {
+    font-style: italic;
+  }
+}

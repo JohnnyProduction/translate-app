@@ -25,11 +25,11 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/translate-app'),
+      dir: require('path').join(__dirname, './coverage/translation-output-app'),
       subdir: '.',
       reporters: [
         { type: 'html' },
-        { type: 'text-summary' }
+        { type: 'translation-input-summary' }
       ]
     },
     reporters: ['progress', 'kjhtml'],

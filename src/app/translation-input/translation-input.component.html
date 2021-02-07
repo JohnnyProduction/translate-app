@@ -1,0 +1,31 @@
+<div class="translation-input">
+  <div class="translation-input__select">
+    <mat-form-field appearance="fill">
+      <mat-label>Select language to Translate</mat-label>
+      <mat-select name="langTo" [(ngModel)]="sourceLang">
+        <mat-option value="en">English</mat-option>
+        <mat-option value="ru">Russian</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <span class="material-icons">
+        arrow_forward_ios
+    </span>
+    <mat-form-field appearance="fill">
+      <mat-label>Select target language</mat-label>
+      <mat-select name="langTarget" [(ngModel)]="targetLang">
+        <mat-option value="en">English</mat-option>
+        <mat-option value="ru">Russian</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="translation-input__text">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your text</mat-label>
+      <textarea name="text" rows="8" matInput [(ngModel)]="sourceText"></textarea>
+    </mat-form-field>
+    <div class="translation-input__button">
+      <button mat-raised-button color="primary" (click)="send()">Translate</button>
+    </div>
+  </div>
+</div>
+

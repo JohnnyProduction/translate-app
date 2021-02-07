@@ -1,0 +1,10 @@
+<div class="history">
+  <ul class="history__items">
+    <li class="history__item">
+      <a routerLink="/translation-output/{{ translation.id }}" class="history__link" href="#">
+        {{ translation.sourceLanguage | appHumanizeLang }} ->{{ translation.targetLanguage | appHumanizeLang }} <br/>
+        {{ translation.sourceText | slice:0:30 }} -> {{ translation.targetText | slice:0:30 }}
+      </a>
+    </li>
+  </ul>
+</div>
