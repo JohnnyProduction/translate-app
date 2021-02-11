@@ -1,5 +1,12 @@
 <div class="home">
   <h2 class="home__title">History</h2>
-  <app-history-list *ngFor="let translation of translations" [translation]="translation"></app-history-list>
-  <button class="home__button" routerLink="/translation-input" mat-raised-button color="primary">Enter text to translate</button>
+  <ul class="home__list">
+    <li class="home__item">
+      <app-history-list *ngFor="let translation of translations" [translation]="translation"></app-history-list>
+      <p *ngIf="translations.length === 0">Test</p>
+    </li>
+  </ul>
+  <div class="home__buttons">
+    <button class="home__button" routerLink="/translation-input" mat-raised-button color="primary">Enter text to translate</button>
+  </div>
 </div>

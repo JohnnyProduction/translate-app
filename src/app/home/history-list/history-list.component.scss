@@ -1,16 +1,77 @@
 .history {
+  display: flex;
   width: 800px;
   margin-bottom: 20px;
-  &__items {
-    border: 1px solid black;
-    border-radius: 5px;
+  background-color: #EFF0F2;
+  border: 1px solid #078E8E;
+  border-radius: 10px;
+  cursor: pointer;
+  &__content {
+    width: 100%;
   }
-  &__link {
-    display: block;
-    height: 100%;
+  &__lang-item {
+    background-color: #48C9B0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #EDF3E3;
+  }
+  &__text-item {
+    text-align: center;
     padding: 10px;
     font-style: italic;
-    &-item {
+  }
+  &__arrow {
+    margin: 0 15px 0 10px;
+    cursor: pointer;
+    position: relative;
+    div {
+      position: relative;
+      top: 45%;
+      width: 90px;
+      height: 10px;
+      background-color: #48C9B0;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+      left:0;
+      display: block;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 10px;
+        top: -11px;
+        right: -8px;
+        background-color: #48C9B0;
+        transform: rotate(45deg);
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 10px;
+        top: 11px;
+        right: -8px;
+        background-color: #48C9B0;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+        transform: rotate(-45deg);
+      }
     }
   }
+  &:hover .history__arrow {
+    animation: arrow 1s linear infinite;
+  }
 }
+
+@keyframes arrow {
+  0% {
+    left:0;
+  }
+  50% {
+    left:10px;
+  }
+  100% {
+    left:0;
+  }
+}
+

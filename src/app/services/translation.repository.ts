@@ -23,11 +23,13 @@ export class TranslationRepository {
     localStorage.setItem('translation', JSON.stringify(all.map(x => x.toDTO())));
   }
 
+
   private initLocaleStorageIfNeed() {
     if (!localStorage.getItem('translation')) {
       localStorage.setItem('translation', JSON.stringify([]))
     }
   }
+
 }
 
 export type TranslationDTO = {

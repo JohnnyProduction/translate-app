@@ -1,5 +1,5 @@
-import {Component, OnInit} from "@angular/core";
-import {TranslationEntity, TranslationRepository} from "../services/translation.repository";
+import { Component, OnInit } from "@angular/core";
+import { TranslationEntity, TranslationRepository } from "../services/translation.repository";
 
 @Component({
   selector: 'app-home',
@@ -9,12 +9,10 @@ import {TranslationEntity, TranslationRepository} from "../services/translation.
 
 export class HomeComponent implements OnInit {
   public translations: TranslationEntity[] = [];
-
-  constructor(private translationRepository: TranslationRepository) {
-
+  constructor(public translationRepository: TranslationRepository) {
   }
 
   ngOnInit(): void {
-    this.translations = this.translationRepository.getAll();
+      this.translations = this.translationRepository.getAll();
   }
 }

@@ -1,10 +1,21 @@
-<div class="history">
-  <ul class="history__items">
-    <li class="history__item">
-      <a routerLink="/translation-output/{{ translation.id }}" class="history__link" href="#">
-        <span class="history__link-item"> {{ translation.sourceLanguage | appHumanizeLang }} -> {{ translation.targetLanguage | appHumanizeLang }} </span> <br/>
-        <span class="history__link-item"> {{ translation.sourceText | slice:0:50 }} -> {{ translation.targetText | slice:0:50 }} </span>
-      </a>
-    </li>
-  </ul>
+<div class="history" routerLink="/translation-output/{{ translation.id }}">
+  <div class="history__content">
+    <div class="history__lang">
+      <div class="history__lang-item"> {{ translation.sourceLanguage | appHumanizeLang }} </div>
+    </div>
+    <div class="history__text">
+      <div class="history__text-item"> {{ translation.sourceText | slice:0:200 }}</div>
+    </div>
+  </div>
+  <div class="history__arrow">
+    <div></div>
+  </div>
+  <div class="history__content">
+    <div class="history__lang">
+      <div class="history__lang-item"> {{ translation.targetLanguage | appHumanizeLang }} </div>
+    </div>
+    <div class="history__text">
+      <div class="history__text-item"> {{ translation.targetText | slice:0:200 }}</div>
+    </div>
+  </div>
 </div>
