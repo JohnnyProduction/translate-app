@@ -3,9 +3,19 @@
   &__title {
     text-align: center;
   }
-  &__buttons{
+  &__item--clear {
+    width: 800px;
+    height: 100px;
+    padding-top: 30px;
+    background-color: #EFF0F2;
+    border: 1px solid #078E8E;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+  }
+  &__buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
   &__button {
     margin-top: 50px;

@@ -3,10 +3,11 @@
   <ul class="home__list">
     <li class="home__item">
       <app-history-list *ngFor="let translation of translations" [translation]="translation"></app-history-list>
-      <p *ngIf="translations.length === 0">Test</p>
+      <div class="home__item--clear" *ngIf="translations.length === 0">Your translate history is empty</div>
     </li>
   </ul>
   <div class="home__buttons">
     <button class="home__button" routerLink="/translation-input" mat-raised-button color="primary">Enter text to translate</button>
+    <button class="home__button" routerLink="/" mat-raised-button color="primary" (click)="clearHistory()">Clear translation history</button>
   </div>
 </div>

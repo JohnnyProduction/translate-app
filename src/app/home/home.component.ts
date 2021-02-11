@@ -15,4 +15,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
       this.translations = this.translationRepository.getAll();
   }
+
+  clearHistory() {
+    this.translationRepository.clear();
+    this.translations = this.translationRepository.getAll();
+  }
 }

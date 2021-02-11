@@ -12,17 +12,20 @@ mat-label {
 }
 
 .translation-input {
-  background-color: #EFF0F2;
   &__select {
     display: flex;
     justify-content: space-between;
+    background-color: #EFF0F2;
   }
   &__text {
     width: 800px;
+    background-color: #EFF0F2;
   }
   &__button {
+    margin-top: 20px;
     text-align: center;
     button {
+      width: 150px;
       background-color: #48C9B0;
     }
   }
